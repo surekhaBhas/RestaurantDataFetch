@@ -1,38 +1,38 @@
 [
     {
-        "_id": "1",
-        "name": "Breakfast",
-        "content": "Start your day with exclusive breakfast options",
-        "image": "assets/breakfast.png"
+        "mealtype_id": 1,
+         "mealtype": "Breakfast",
+         "content": "Start your day with exclusive breakfast options",
+         "meal_image": "https://i.ibb.co/FVhSTWK/breakfast.jpg"
     },
     {
-        "_id": "2",
-        "name": "Lunch",
+        "mealtype_id": 2,
+        "mealtype": "Lunch",
         "content": "Start your day with exclusive breakfast options",
-        "image": "assets/lunch.png"
+        "meal_image": "https://i.ibb.co/8rPxkWP/lunch.jpg"
     },
     {
-        "_id": "3",
-        "name": "Dinner",
+        "mealtype_id": 3,
+        "mealtype": "Dinner",
         "content": "Start your day with exclusive breakfast options",
-        "image": "assets/dinner.png"
+        "meal_image": "https://i.ibb.co/XjzPqYv/dinner.jpg"
     },
     {
-        "_id": "4",
-        "name": "Snacks",
+        "mealtype_id": 4,
+        "mealtype": "Snacks",
         "content": "Start your day with exclusive breakfast options",
-        "image": "assets/snacks.png"
+        "meal_image": "https://i.ibb.co/wchCHfb/snacks.jpg"
     },
     {
-        "_id": "5",
-        "name": "Drinks",
+        "mealtype_id": 5,
+        "mealtype": "Drinks",
         "content": "Start your day with exclusive breakfast options",
-        "image": "assets/drinks.png"
+        "meal_image": "https://i.ibb.co/YR0S6fV/drinks.jpg"
     },
     {
-        "_id": "6",
-        "name": "NightLife",
+        "mealtype_id": 6,
+        "mealtype": "NightLife",
         "content": "Start your day with exclusive breakfast options",
-        "image": "assets/nightlife.png"
+        "meal_image": "https://i.ibb.co/q1fC2jW/nightlife.jpg"
     }
 ]

@@ -1,7 +1,7 @@
 const express=require('express')
 const router=express.Router()
-const getRestaurantData=require("../controllers/locationController")
+const getLocationData=require("../controllers/locationController")
 
-router.get('/:cityName',getRestaurantData)
+router.get('/',getLocationData)
 
 module.exports=router;

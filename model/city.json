@@ -1,0 +1,22 @@
+[
+    {
+        "city_id":1,
+        "city_name":"Delhi"
+    },
+    {
+        "city_id":2,
+        "city_name":"Mumbai"
+    },
+    {
+        "city_id":3,
+        "city_name":"Pune"
+    },
+    {
+        "city_id":4,
+        "city_name":"Bangalore"
+    },
+    {
+        "city_id":5,
+        "city_name":"Chandigarh"
+    }
+]

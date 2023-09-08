@@ -4,7 +4,7 @@ const router = express.Router();
 router.get('/', async (req, res) => {
     try {
       const db = await connectToDB();
-      const restaurantData = db.collection('restaurantData'); // Access the collection using collection() method
+      const restaurantData = db.collection('mealTypes'); // Access the collection using collection() method
       const data = await restaurantData.find().toArray();
       res.json(data);
     } catch (err) {

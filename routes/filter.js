@@ -3,7 +3,7 @@ const router=express.Router()
 const getFilterData=require("../controllers/filterController")
 
 
-router.get('/',getFilterData)
+router.get('/:mealId',getFilterData)
 
 
 module.exports=router;

@@ -452,7 +452,7 @@
         "menu_id":51,
         "menu_name": "King Fries",
         "description": "The perfect crispy partner.",
-        "restaurant_id": 11,
+        "restaurant_id": 10,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/2dc/7d31d7425ab6de31e2e92806561352dc.jpg",
         "menu_type": "vegetarian",
         "menu_price": "99"
@@ -460,7 +460,7 @@
         "menu_id":52,
         "menu_name": "Cheese Melt Down Burger",
         "description": "Cheese oozing spicy veg patty, veggies and creamy sauce. An indulgent treat from our King's Collection!",
-        "restaurant_id": 11,
+        "restaurant_id": 10,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/5a9/10759d3aaa3f99219c916c9efd9195a9.jpg",
         "menu_type": "vegetarian",
         "menu_price": "169"
@@ -469,7 +469,7 @@
         "menu_id":53,
         "menu_name": "Crispy Chicken Burger",
         "description": "Our best-selling burger with crispy chicken patty, fresh onion and our signature sauce.",
-        "restaurant_id": 11,
+        "restaurant_id": 10,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/e6b/251f04208ee79ba396b192d87a7abe6b.jpg",
         "menu_type": "non-vegetarian",
         "menu_price": "80"
@@ -478,7 +478,7 @@
         "menu_id":54,
         "menu_name": "Crispy Veg Combo",
         "description": "Our best-selling burger with crispy veg patty, fresh onion and our signature sauce. Comes with Fries + Exclusive Pepsi.",
-        "restaurant_id": 11,
+        "restaurant_id": 10,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/135/b2a0cc85a53134ba273cc30efdb00135.jpg",
         "menu_type": "vegetarian",
         "menu_price": "209.14"
@@ -487,7 +487,7 @@
         "menu_id":55,
         "menu_name": "Veg Crunchy Volcano",
         "description": "Be ready for a crunchy, saucy, explosion. A crunchy volcano shell filled with beans & veg mix, chef's secret sauce, fresh onion & crisp lettuce.",
-        "restaurant_id": 11,
+        "restaurant_id": 9,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/af9/b871732b39c98fc8f26f9044c1afeaf9.jpg",
         "menu_type": "vegetarian",
         "menu_price": "60"
@@ -496,7 +496,7 @@
         "menu_id":56,
         "menu_name": "Cream Mushroom Pasta",
         "description": "Served with herb garlic toast. Flavourful blend of Italian herbs and bechamel and Parmesan cheese in crunchy sauteed mushrooms.",
-        "restaurant_id": 12,
+        "restaurant_id": 9,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/bc6/7e32e9359a342ab0ff16144750689bc6.jpg",
         "menu_type": "vegetarian",
         "menu_price": "335"
@@ -505,7 +505,7 @@
         "menu_id":57,
         "menu_name": "Paneer Tikka Sandwich",
         "description": "Served with potato chips. Fresh cottage cheese cubes with green capsicum and onions marinated in spicy tikka sauce.",
-        "restaurant_id": 12,
+        "restaurant_id": 9,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/b1f/a9bf008b440e754c981747a6752feb1f.jpg",
         "menu_type": "vegetarian",
         "menu_price": "235"
@@ -514,7 +514,7 @@
         "menu_id":58,
         "menu_name": "Coffee Frappe",
         "description": "A smooth blend of coffee, milk and gelato.",
-        "restaurant_id": 12,
+        "restaurant_id": 8,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/5f7/6a7f76f41dda047eb30dbc003f4e95f7.jpg",
         "menu_type": "vegetarian",
         "menu_price": "185"
@@ -523,7 +523,7 @@
         "menu_id":59,
         "menu_name": "Cheese Omelette",
         "description": "Omelette Filled with cheese",
-        "restaurant_id": 12,
+        "restaurant_id": 8,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/359/b5f48db2ce7c7f3672701bf6847e5359.jpg",
         "menu_type": "non-vegetarian",
         "menu_price": "265"
@@ -532,7 +532,7 @@
         "menu_id":60,
         "menu_name": "Spaghetti Bolognese Pasta",
         "description": "Served with herb garlic toast. Minced chicken prepared in flavorful red wine sauce tossed with roasted garlic served with spaghetti.",
-        "restaurant_id": 12 ,
+        "restaurant_id": 7 ,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/dad/de9dd1744194f08d159f4734c56c1dad.jpg",
         "menu_type": "non-vegetarian",
         "menu_price": "425"
@@ -541,7 +541,7 @@
         "menu_id":61,
         "menu_name": "Grilled Malai Chaap",
         "description": "Marinated soya chaap in fresh garlic cream, soft and juicy.",
-        "restaurant_id": 13,
+        "restaurant_id": 7,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/ee9/223949a94fb3cbeebd5db5cc0a7a4ee9.jpg",
         "menu_type": "vegetarian",
         "menu_price": "219"
@@ -550,7 +550,7 @@
         "menu_id":62,
         "menu_name": "Aloo Mutter Gravy Jeera Rice Bowl",
         "description": "Delicious gravy served with jeera rice in a bowl.",
-        "restaurant_id": 13,
+        "restaurant_id": 6,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/1fe/952e528db42a04d6833c15dec4c0f1fe.jpg",
         "menu_type": "vegetarian",
         "menu_price": "209"
@@ -559,7 +559,7 @@
         "menu_id":63,
         "menu_name": "Jeera Rice",
         "description": "Jeera rice or zeera rice is an Indian dish consisting of rice and cumin seeds. It is a popular dish in North India as an everyday rice dish.",
-        "restaurant_id": 13,
+        "restaurant_id": 6,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/38a/ce8b387cd48d5244358abf896dc3538a.jpg",
         "menu_type": "vegetarian",
         "menu_price": "114.45"
@@ -568,7 +568,7 @@
         "menu_id":64,
         "menu_name": "Poha",
         "description": "Flattened rice fried with onions,chilli,potato etc.",
-        "restaurant_id": 13,
+        "restaurant_id": 6,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/f14/95e6d9bad9deceff67f14fcac24a1f14.jpg",
         "menu_type": "vegetarian",
         "menu_price": "72.45"
@@ -577,7 +577,7 @@
         "menu_id":65,
         "menu_name": "Grilled Aachari Chaap",
         "description": "Marinated soya chaap with Indian aachari flavor.",
-        "restaurant_id": 13,
+        "restaurant_id": 5,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/2be/299a14e3129d374e74d6fb3a0100e2be.jpg",
         "menu_type": "vegetarian",
         "menu_price": "219"
@@ -586,7 +586,7 @@
         "menu_id":66,
         "menu_name": "Carrot Halwa",
         "description": "grated carrots in a pot containing a specific amount of water, milk and sugar, cardamom and then cooking while stirring regularly.",
-        "restaurant_id": 14,
+        "restaurant_id": 5,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/2e8/c4494d10535a8c36007e32b018c1c2e8.jpg",
         "menu_type": "vegetarian",
         "menu_price": "50"
@@ -595,7 +595,7 @@
         "menu_id":67,
         "menu_name": "Onion Rava Masala Dosa",
         "description": "made with semolina, cumin, ginger, coriander leaves and green chilies.",
-        "restaurant_id": 14,
+        "restaurant_id": 4,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/d12/b02c41f4e11d43bb345865a35f505d12.jpg",
         "menu_type": "vegetarian",
         "menu_price": "100"
@@ -604,7 +604,7 @@
         "menu_id":68,
         "menu_name": "Paper Plain Dosa",
         "description": "made with semolina, cumin, ginger, coriander leaves and green chilies.",
-        "restaurant_id": 14,
+        "restaurant_id": 4,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/ce8/1d5acfa248f6244bcf518f1c89d2dce8.jpg",
         "menu_type": "vegetarian",
         "menu_price": "90"
@@ -613,7 +613,7 @@
         "menu_id":69,
         "menu_name": "Poori Sagu [3 Pieces]",
         "description": "Serve Poori with Sagu",
-        "restaurant_id": 14,
+        "restaurant_id": 3,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/542/6ab4d40d01abbe154433155ef4c6b542.jpg",
         "menu_type": "vegetarian",
         "menu_price": "60"
@@ -622,7 +622,7 @@
         "menu_id":70,
         "menu_name": "Idli [2 Pieces]",
         "description": "Idli serves with coconut chutney and sambhar in a bowl",
-        "restaurant_id": 14,
+        "restaurant_id": 2,
         "menu_image": "https://b.zmtcdn.com/data/dish_photos/dcb/437e7ba47d0fe7c78971ac916b01cdcb.jpg",
         "menu_type": "vegetarian",
         "menu_price": "40"
