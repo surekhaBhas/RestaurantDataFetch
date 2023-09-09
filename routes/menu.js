@@ -1,6 +1,6 @@
 const express=require('express')
 const router=express.Router()
-const getMenuData=require("../controllers/locationController")
+const getMenuData=require("../controllers/menuController")
 
 
 router.get('/:restaurantId',getMenuData)
