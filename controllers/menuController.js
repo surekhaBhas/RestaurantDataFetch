@@ -1,7 +1,7 @@
 
 const connectToDB =require('../db')
 
-getMenuData=async(req,res)=>{
+const getMenuData=async(req,res)=>{
     const db=await connectToDB();
     const menuCollection=db.collection('restaurantMenu')
     try{
