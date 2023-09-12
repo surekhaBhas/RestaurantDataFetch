@@ -2,15 +2,14 @@ const express=require('express');
 const app=express();
 const PORT=8900;
 const cors=require('cors');
+const corsOptions = require('./config/corsOptions');
 const mongoose=require('mongoose');
 const connectDB=require('./dbConn')
 const cookieParser=require('cookie-parser');
+const credentials = require('./middleware/credentials');
 const verifyJWT=require('./middleware/verifyJWT')
 
-const corsOptions = {
-  origin: 'http://localhost:3000', 
-  credentials: true, 
-};
+app.use(credentials);
 
 app.use(cors(corsOptions));
 
