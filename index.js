@@ -22,7 +22,7 @@ app.use(express.json())
 app.use('/register',require('./routes/register'))
 app.use('/login',require('./routes/login'))
 app.use('/refresh',require('./routes/refresh'))
-app.use('/',require('./routes/logout'))
+app.use('/logout',require('./routes/logout'))
 app.use(verifyJWT)
 app.use('/locations', require('./routes/locations'));
 app.use('/cities', require('./routes/city'));
