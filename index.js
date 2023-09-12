@@ -7,10 +7,16 @@ const connectDB=require('./dbConn')
 const cookieParser=require('cookie-parser');
 const verifyJWT=require('./middleware/verifyJWT')
 
+const corsOptions = {
+  origin: 'http://localhost:3000', 
+  credentials: true, 
+};
+
+app.use(cors(corsOptions));
+
 connectDB()
 app.use(cookieParser());
 
-app.use(cors())
 app.use(express.json())
 
 app.use('/register',require('./routes/register'))
