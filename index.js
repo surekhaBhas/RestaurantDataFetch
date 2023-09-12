@@ -8,6 +8,7 @@ const connectDB=require('./dbConn')
 const cookieParser=require('cookie-parser');
 const credentials = require('./middleware/credentials');
 const verifyJWT=require('./middleware/verifyJWT')
+const verifyRoles=require('./')
 
 app.use(credentials);
 

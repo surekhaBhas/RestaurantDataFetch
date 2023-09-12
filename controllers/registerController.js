@@ -11,6 +11,7 @@ const bcrypt=require('bcrypt')
 
        const result=await User.create({
         "username":username,
+        "roles":{"user":2001},
         "password":hashedPwd,
         "email":email
        })
