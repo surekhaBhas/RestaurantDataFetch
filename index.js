@@ -25,14 +25,12 @@ app.use('/refresh',require('./routes/refresh'))
 app.use('/logout',require('./routes/logout'))
 app.use('/locations', require('./routes/locations'));
 app.use('/cities', require('./routes/city'));
-app.use(verifyJWT)
-
-
 app.use('/filter', require('./routes/filter'));
 app.use('/quickSearch', require('./routes/quickSearch'));
 app.use('/restaurant', require('./routes/restaurant'));
 app.use('/details/restaurant', require('./routes/restaurantDetail'));
 app.use('/menu', require('./routes/menu'));
+app.use(verifyJWT)
 
 
 app.use('*', (req, res) => {
