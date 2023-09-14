@@ -30,11 +30,15 @@ app.use('/quickSearch', require('./routes/quickSearch'));
 app.use('/restaurant', require('./routes/restaurant'));
 app.use('/details/restaurant', require('./routes/restaurantDetail'));
 app.use('/menu', require('./routes/menu'));
+app.use('/menuItems',require('./routes/menuItems'))
 app.use(verifyJWT)
+app.use('/orders',require('./routes/orders'))
+
+
 
 
 app.use('*', (req, res) => {
-    res.status(404).json({"message": "Not Found"});
+    res.status(404).json({"message": "Not Found"})
   });
 
   mongoose.connection.once('open', () => {
