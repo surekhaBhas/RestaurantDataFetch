@@ -28,3 +28,7 @@ get sorted from high to low price  restaurant data http://localhost:8900/filter/
 
 
 get pagination menu data http://localhost:8900/menu?page=1&per_page=10
+
+post orders http://localhost:8900/orders 
+get all orders http://localhost:8900/orders 
+get one order by orderId http://localhost:8900/orders/:order_id
