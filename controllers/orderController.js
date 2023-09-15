@@ -73,4 +73,23 @@ const deleteOrder=async(req,res)=>{
         res.status(500).json({ error: 'Internal server error' });
     }
 }
-module.exports = {postOrderDetails,getAllUserDetails,getUserByOrderId,deleteOrder};
+
+const updateOrders=async(req,res)=>{
+    let menuItem=req.query.menuId;
+    const cost=req.query.cost;
+    const orderId=req.params.orderId 
+    menuItem = Array.isArray( menuItem) ?  menuItem : menuItem.split(',');
+    menuItem=menuItem.map(each=>parseInt(each)) 
+      
+    try{
+        const result=await orders.findOne({"order_id":orderId})
+        result.cost=cost 
+        result.menu_item=menuItem 
+        await result.save()
+        res.status(200).json({ message: 'Menu items and cost updated successfully' });
+    }catch(err){
+        res.status(500).json({ error: err.message });
+    }
+}
+
+module.exports = {postOrderDetails,getAllUserDetails,getUserByOrderId,deleteOrder,updateOrders};
