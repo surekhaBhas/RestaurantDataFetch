@@ -31,4 +31,6 @@ get pagination menu data http://localhost:8900/menu?page=1&per_page=10
 
 post orders http://localhost:8900/orders 
 get all orders http://localhost:8900/orders 
-get one order by orderId http://localhost:8900/orders/:order_id
+get one order by orderId http://localhost:8900/orders/:order_id 
+delete by orderId http://localhost:8900/orders/:order_id 
+update cost,menuItems http://localhost:8900/orders/:order_id?cost=900?menuId=[23,33,22]
