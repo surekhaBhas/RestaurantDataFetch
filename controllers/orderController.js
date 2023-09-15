@@ -56,4 +56,21 @@ const getUserByOrderId=async(req,res)=>{
         console.log(err)
     }
 }
-module.exports = {postOrderDetails,getAllUserDetails,getUserByOrderId};
+
+const deleteOrder=async(req,res)=>{
+    const orderId=req.params.orderId
+    try{
+        const result=await orders.deleteOne({"order_id":orderId})
+        if (result.deletedCount === 1) {
+          
+            res.status(204).json({ message: 'Order deleted successfully' });
+          } else {
+           
+            res.status(404).json({ error: 'Order not found' });
+          }
+    }catch(err){
+        console.error('Error deleting order:', err);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+}
+module.exports = {postOrderDetails,getAllUserDetails,getUserByOrderId,deleteOrder};
