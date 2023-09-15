@@ -78,8 +78,8 @@ const updateOrders=async(req,res)=>{
     let menuItem=req.query.menuId;
     const cost=req.query.cost;
     const orderId=req.params.orderId 
-    menuItem = Array.isArray( menuItem) ?  menuItem : menuItem.split(',');
-    menuItem=menuItem.map(each=>parseInt(each)) 
+    menuItem=menuItem.slice(1,menuItem.length-1).split(',')
+    
       
     try{
         const result=await orders.findOne({"order_id":orderId})
