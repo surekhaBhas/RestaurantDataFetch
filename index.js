@@ -12,7 +12,6 @@ const verifyJWT=require('./middleware/verifyJWT')
 
 app.use(credentials);
 
-app.use(cors())
 app.use(cors(corsOptions));
 
 connectDB()
