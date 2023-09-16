@@ -2,7 +2,7 @@ const express=require('express');
 const app=express();
 const PORT=8900;
 const cors=require('cors');
-//const corsOptions = require('./config/corsOptions');
+const corsOptions = require('./config/corsOptions');
 const mongoose=require('mongoose');
 const connectDB=require('./dbConn')
 const cookieParser=require('cookie-parser');
@@ -13,7 +13,7 @@ const verifyJWT=require('./middleware/verifyJWT')
 app.use(credentials);
 
 app.use(cors())
-//app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 connectDB()
 app.use(cookieParser());
