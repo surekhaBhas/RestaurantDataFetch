@@ -9,7 +9,14 @@ const cookieParser=require('cookie-parser');
 const credentials = require('./middleware/credentials');
 const verifyJWT=require('./middleware/verifyJWT')
 const bodyParser=require('body-parser')
+const https=require('https');
+const qs=require('querystring')
+const dotenv = require("dotenv");
+dotenv.config()
 
+const payment=require('./paytm/routes/payment.route')
+
+app.use("/payment", payment);
 connectDB()
 app.use(credentials);
 
@@ -36,7 +43,7 @@ app.use('/restaurant', require('./routes/restaurant'));
 app.use('/details/restaurant', require('./routes/restaurantDetail'));
 app.use('/menu', require('./routes/menu'));
 app.use('/menuItems',require('./routes/menuItems'))
-app.use('/paytm',require('./router'))
+
 app.use(verifyJWT)
 app.use('/orders',require('./routes/orders'))
 
