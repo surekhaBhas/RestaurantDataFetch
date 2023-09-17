@@ -8,16 +8,21 @@ const connectDB=require('./dbConn')
 const cookieParser=require('cookie-parser');
 const credentials = require('./middleware/credentials');
 const verifyJWT=require('./middleware/verifyJWT')
+const bodyParser=require('body-parser')
 
-
+connectDB()
 app.use(credentials);
 
 app.use(cors(corsOptions));
 
-connectDB()
+
 app.use(cookieParser());
 
-app.use(express.json())
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+app.use(express.static(__dirname + "/views"));
+app.set("view engine", "ejs");
 
 app.use('/register',require('./routes/register'))
 app.use('/login',require('./routes/login'))
@@ -31,6 +36,7 @@ app.use('/restaurant', require('./routes/restaurant'));
 app.use('/details/restaurant', require('./routes/restaurantDetail'));
 app.use('/menu', require('./routes/menu'));
 app.use('/menuItems',require('./routes/menuItems'))
+app.use('/paytm',require('./router'))
 app.use(verifyJWT)
 app.use('/orders',require('./routes/orders'))
 
