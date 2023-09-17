@@ -8,7 +8,7 @@ const { v4: uuidv4 } = require("uuid");
 
 exports.paynow = (req, res, next) => {
 	const order_id = uuidv4(); //some random order id
-	const amount = req.query.amount; //amount to be paid
+	const amount = req.body.amount; //amount to be paid
 	const cust_id = "shivam121820"; //customer id (this can be your db user id)
 	const email = "shivam@gmail.com"; //customer email address
 	const mobile_no = "7777777777"; //customer mobile no.
