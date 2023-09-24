@@ -39,6 +39,9 @@ const orderSchema=new Schema({
     },
     bank_name:{
         type:String
+    },
+    payment:{
+        type:String
     }
 
 })

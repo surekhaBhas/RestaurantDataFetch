@@ -27,7 +27,8 @@ const postOrderDetails = async (req, res) => {
             "cost": cost,
             "restaurant_name": restaurantName,
             "menu_item": menuItem,
-            "date": date
+            "date": date,
+            "payment":''
         });
 
         console.log(result);

@@ -1,21 +1,19 @@
-// require all the packages needed
-
+const orders = require('../model/order');
 require('dotenv').config();
 const formidable = require('formidable');
 const https = require('https');
 const { v4: uuidv4 } = require('uuid');
 
-// import the paytmChecksum to authenticate the payment requests
+
 const PaytmChecksum = require('./PaytmChecksum');
 
 
 exports.payments = (req, res) => {
     const {
-        amount
+        amount,order
         
     } = req.body;
 
-    // prepare the request Object
     let params = {
         MID: process.env.PAYTM_MERCHANT_ID,
         WEBSITE: process.env.PAYTM_WEBSITE,
@@ -26,10 +24,10 @@ exports.payments = (req, res) => {
         TXN_AMOUNT: amount.toString(),
         EMAIL: "tsurekha3@gmail.com",
         MOBILE_NO: '9032586651',
-        CALLBACK_URL: 'http://localhost:8900/paytm/paymentCallback'
+        CALLBACK_URL: 'http://localhost:8900/paytm/paymentCallback',
+        ORDER:order
     };
 
-    // use paytmchecksum to generate a signature
     let paytmChecksum = PaytmChecksum.generateSignature(params, process.env.PAYTM_MERCHANT_KEY);
 
     paytmChecksum.then(response => {
@@ -47,8 +45,7 @@ exports.payments = (req, res) => {
 }
 
 exports.paymentsCallback = (req, res) => {
-    // it is called by paytm system, Paytm server will send the transaction status here
-    // we need to read this transaction details
+    
 
     try {
 
@@ -56,19 +53,18 @@ exports.paymentsCallback = (req, res) => {
 
         form.parse(req, (error, fields, file) => {
 
-            // check if it is an error or not
+          
             if (error) {
                 console.log(error);
                 res.status(500).json({ error });
             }
 
-            // verify the signature
+
             const checksumHash = fields.CHECKSUMHASH;
             const isVerified = PaytmChecksum.verifySignature(fields, process.env.PAYTM_MERCHANT_KEY, checksumHash);
 
             if (isVerified) {
-                // response from the paytm server is valid
-                // make an API call to the paytm server to get the transaction status
+                
 
                 let params = {
                     MID: fields.MID,
@@ -95,18 +91,22 @@ exports.paymentsCallback = (req, res) => {
                             responseFromPaytm.on('data', (chunk) => {
                                 response += chunk;
                             });
-                            responseFromPaytm.on('end', () => {
+                            responseFromPaytm.on('end', async() => {
+                                const callbackOrder = fields.ORDER;
+                                const result = await orders.findOne({ "order_id": callbackOrder });
+                
+                                if (result) {
+                                    if (JSON.parse(fields.STATUS).toUpperCase() === 'TXN_SUCCESS') {
+                                        result.payment = "Success";
+                                    } else {
+                                        result.payment = "Failure";
+                                    }
+                                    await result.save();
+                                }
                                 if (JSON.parse(response).STATUS === 'TXN_SUCCESS') {
-                                    // transaction is successfull
-                                    // zomato BE will inform the zomato FE
-
-                                    // TODO: Learner Task: save the order details and transaction status to the Database
-                                    res.sendFile(__dirname + '/txn_success.html');
-                                } else {
-                                    // transaction in failure
-                                    // zomato BE will inform the zomato FE
                                     
-                                    // TODO: Learner Task: save the order details and transaction status to the Database
+                                    res.sendFile(__dirname + '/txn_success.html');
+                                } else { 
                                     res.sendFile(__dirname + '/txn_failure.html');
                                 }
                             });
@@ -120,7 +120,7 @@ exports.paymentsCallback = (req, res) => {
                         });
                     })
             } else {
-                // response is not valid
+            
                 console.log("checksum mismatch");
                 res.status(500).json({ error: "It's a hacker !" });
             }
