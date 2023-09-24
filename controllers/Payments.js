@@ -13,7 +13,7 @@ exports.payments = (req, res) => {
         amount,order
         
     } = req.body;
-
+  console.log(amount,order)
     let params = {
         MID: process.env.PAYTM_MERCHANT_ID,
         WEBSITE: process.env.PAYTM_WEBSITE,

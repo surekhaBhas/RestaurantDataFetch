@@ -13,11 +13,12 @@ const https=require('https');
 const qs=require('querystring')
 const dotenv = require("dotenv");
 dotenv.config()
-app.use(cors(corsOptions))
 
-connectDB()
+app.use(cors(corsOptions));
 app.use(credentials);
 
+
+connectDB()
 
 
 
@@ -26,8 +27,6 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(express.static(__dirname + "/views"));
-app.set("view engine", "ejs");
 
 app.use('/register',require('./routes/register'))
 app.use('/login',require('./routes/login'))
