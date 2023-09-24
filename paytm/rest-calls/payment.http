@@ -1,5 +1,0 @@
-### route for payment
-GET http://localhost:5500/payment/paynow
-
-### roy=ute for succcessfull callback
-POST http://localhost:5500/callback

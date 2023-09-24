@@ -14,9 +14,7 @@ const qs=require('querystring')
 const dotenv = require("dotenv");
 dotenv.config()
 
-const payment=require('./paytm/routes/payment.route')
 
-app.use("/payment", payment);
 connectDB()
 app.use(credentials);
 
@@ -46,7 +44,7 @@ app.use('/menuItems',require('./routes/menuItems'))
 
 app.use(verifyJWT)
 app.use('/orders',require('./routes/orders'))
-
+app.use('/paytm',require('./routes/paytm'))
 
 
 
