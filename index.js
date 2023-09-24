@@ -13,7 +13,7 @@ const https=require('https');
 const qs=require('querystring')
 const dotenv = require("dotenv");
 dotenv.config()
-
+app.use(cors(corsOptions))
 
 connectDB()
 app.use(credentials);
