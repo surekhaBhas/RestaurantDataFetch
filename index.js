@@ -18,7 +18,7 @@ dotenv.config()
 connectDB()
 app.use(credentials);
 
-app.use(cors(corsOptions));
+
 
 
 app.use(cookieParser());
